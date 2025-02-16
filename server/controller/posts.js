@@ -89,7 +89,7 @@ module.exports = {
   createPostByUserId: async (req, res) => {
     try {
       const { userId, recipe } = req.body;
-      if (!userId || recipe)
+      if (!userId || !recipe)
         return res.status(400).json({ error: 'userId and recipe required.' });
       const postRef = await db.collection('posts').add({
         user_id: userId,
@@ -132,7 +132,7 @@ module.exports = {
       if (Object.keys(updateData).length > 0) {
         updateData.updated_at = Firestore.Timestamp.now();
       }
-      console.log(updateData);
+      // console.log(updateData);
       await postRef.set(updateData, { merge: true });
       return res.json({ status: 'ok' });
     } catch (e) {
