@@ -134,7 +134,7 @@ module.exports = {
       }
       // console.log(updateData);
       await postRef.set(updateData, { merge: true });
-      return res.json({ status: 'ok' });
+      return res.json({ status: 'ok', data: updateData });
     } catch (e) {
       console.error('updatePostByUserId err: ', e);
       return res.status(500).json({ error: e.message });
