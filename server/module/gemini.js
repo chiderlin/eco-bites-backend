@@ -73,9 +73,9 @@ class Gemini {
     try {
       const result = await this.generativeModel.generateContent(request);
       const response = await result.response;
-      const fullTextResponse = response.candidates[0].content.parts[0].text;
-      console.log(fullTextResponse);
-      return fullTextResponse;
+      // const fullTextResponse = response.candidates[0].content.parts[0].text;
+      // console.log(fullTextResponse);
+      return response;
     } catch (err) {
       console.error('imgUrlGenerateContent err:', err);
       return err;
