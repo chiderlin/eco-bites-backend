@@ -7,7 +7,24 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 const HOST = process.env.HOST || '0.0.0.0';
 
-// app.use(express.raw({ type: 'application/octet-stream' })); //處理2進制請求
+const allowerOrigins = [
+  'https://vivi2393142.github.io/ecoBites-web/',
+  'http://localhost:3000',
+];
+
+app.use(
+  cors({
+    origin: function (origin, cb) {
+      if (!origin || allowerOrigins.includes(origin)) {
+        cb(null, true); // allow request
+      } else {
+        cb(new Error('Not allowed by CORS')); // block
+      }
+    },
+    methods: 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
+    allowedHeaders: 'Content-Type, Authorization',
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use('/api', router);
