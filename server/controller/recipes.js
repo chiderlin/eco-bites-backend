@@ -7,6 +7,7 @@ module.exports = {
   },
 
   getFridgeRecipes: async (req, res) => {
+    console.log('getFridgeRecipes req:', req);
     if (!req.file) {
       return res.status(400).json({ error: 'No image upload.' });
     }
