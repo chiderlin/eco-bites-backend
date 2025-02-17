@@ -53,7 +53,7 @@ module.exports = {
         base64Image,
         fridgePrompts
       );
-      // console.log(geminiResponse);
+      console.log(geminiResponse);
       const text = geminiResponse.candidates?.[0]?.content?.parts?.[0].text;
       // console.log(text);
       return res.json({ status: 'ok', data: text });
