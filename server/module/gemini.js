@@ -13,10 +13,12 @@ class Gemini {
   constructor(
     projectId,
     location,
+    model,
     instruction = config.GCP.DEFAULT_GEMINI_INSTRUCTION
   ) {
     this.project = projectId;
     this.location = location;
+    this.model = model;
     this.instruction = instruction;
     this.generativeModel = this.initGemini(this.project, this.location);
   }
@@ -27,9 +29,10 @@ class Gemini {
       location,
       googleAuthOptions: { keyFilename: config.GCP.KEY },
     });
-
+    console.log(this.model);
+    //config.GCP.DEFAULT_GEMINI_MODEL,
     return vertexAI.getGenerativeModel({
-      model: config.GCP.DEFAULT_GEMINI_MODEL,
+      model: this.model,
       systemInstruction: {
         role: 'system',
         parts: [{ text: this.instruction }],

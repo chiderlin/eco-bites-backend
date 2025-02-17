@@ -10,5 +10,6 @@ module.exports = {
     DEFAULT_GEMINI_MODEL: 'gemini-1.5-flash-002',
     UPGRADE_LOCATION: 'us-central1',
     UPGRADE_GEMINI_MODEL: 'gemini-2.0-flash-001',
+    IMAGE_MODEL: 'gemini-1.5-vision',
   },
 };

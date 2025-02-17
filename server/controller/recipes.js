@@ -50,7 +50,11 @@ module.exports = {
     ]
     `;
     try {
-      const ai = new Gemini(config.GCP.PROJECT, config.GCP.DEFAULT_LOCATION);
+      const ai = new Gemini(
+        config.GCP.PROJECT,
+        config.GCP.DEFAULT_LOCATION,
+        config.GCP.DEFAULT_GEMINI_MODEL
+      );
       const geminiResponse = await ai.base64ImgGenerateContent(
         base64Image,
         fridgePrompts
@@ -102,7 +106,11 @@ module.exports = {
     ]
     `;
     try {
-      const ai = new Gemini(config.GCP.PROJECT, config.GCP.DEFAULT_LOCATION);
+      const ai = new Gemini(
+        config.GCP.PROJECT,
+        config.GCP.DEFAULT_LOCATION,
+        config.GCP.DEFAULT_GEMINI_MODEL
+      );
       const geminiResponse = await ai.imgUrlGenerateContent(url, fridgePrompts);
       // console.log(geminiResponse);
       const text = geminiResponse.candidates?.[0]?.content?.parts?.[0].text;
@@ -148,6 +156,7 @@ Please follow this format in your response:
       const ai = new Gemini(
         config.GCP.PROJECT,
         config.GCP.DEFAULT_LOCATION,
+        config.GCP.DEFAULT_GEMINI_MODEL,
         'you are a ai assistant to recommand recipes'
       );
       const geminiResponse = await ai.generateContent(recommandRecipePrompts);
