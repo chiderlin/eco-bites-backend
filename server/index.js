@@ -8,8 +8,9 @@ const PORT = process.env.PORT || 8080;
 const HOST = process.env.HOST || '0.0.0.0';
 
 const allowerOrigins = [
-  'https://vivi2393142.github.io/ecoBites-web/',
+  'https://vivi2393142.github.io/*',
   'http://localhost:3000',
+  '*',
 ];
 
 app.use(
