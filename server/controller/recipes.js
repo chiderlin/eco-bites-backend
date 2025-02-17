@@ -53,9 +53,9 @@ module.exports = {
         base64Image,
         fridgePrompts
       );
-      console.log(geminiResponse);
+      console.log('geminiResponse: ', geminiResponse);
       const text = geminiResponse.candidates?.[0]?.content?.parts?.[0].text;
-      // console.log(text);
+      console.log('text:', text);
       return res.json({ status: 'ok', data: text });
     } catch (e) {
       console.log('getFridgeRecipes err:', e);
