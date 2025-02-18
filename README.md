@@ -2,15 +2,9 @@
 
 <img src="./readme-img/logo_eco_bites.svg" width="200"></img>
 
-[Frontend Repo](https://github.com/vivi2393142/ecoBites-web)
+### [Frontend Repo](https://github.com/vivi2393142/ecoBites-web)
 
 ## Backend Info
-
-## Function
-
-- Make posts
-- Suggest recipes
-- Reward recipe & cuisines cards
 
 ## Tech stack
 
