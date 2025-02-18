@@ -31,3 +31,8 @@ Google cloud service:
 
 - ChatGPT: ask coding questions, generate cards images
 - Gemini: generate recipes suggestion for app
+
+## Future Optimze
+
+- Cloud run reject receiving Gemini image upload API
+- Remove key.json in project, using Secret Manager for key management
