@@ -2,15 +2,15 @@
 
 [Frontend Repo](https://github.com/vivi2393142/ecoBites-web)
 
-### Backend
+## Backend Info
 
-#### Function
+## Function
 
 - make posts
 - suggest recipes
 - reward recipe & cuisines cards
 
-#### tech stack
+## tech stack
 
 Backend: Express js
 Google cloud service:
@@ -21,7 +21,7 @@ Google cloud service:
 - Ai chat - Gemini: Generate recipes suggestion
 - Firestore: NoSQL database
 
-#### Dependencies
+## Dependencies
 
 - @google-cloud/firestore
 - @google-cloud/storage
@@ -31,12 +31,12 @@ Google cloud service:
 - multer: Handle receiving image/file
 - nodemon: auto reload when updating code in local developing.
 
-### AI helper
+## AI helper
 
 - ChatGPT: ask coding questions, generate cards images
 - Gemini: generate recipes suggestion for app
 
-#### Future Optimize
+## Future Optimize
 
 - Cloud run reject receiving Gemini image upload API
 - Remove key.json in project, using Secret Manager for key management
