@@ -1,25 +1,32 @@
 ## ECOBITES
 
+<img src="./readme-img/logo_eco_bites.svg" width="200"></img>
+
 [Frontend Repo](https://github.com/vivi2393142/ecoBites-web)
 
 ## Backend Info
 
 ## Function
 
-- make posts
-- suggest recipes
-- reward recipe & cuisines cards
+- Make posts
+- Suggest recipes
+- Reward recipe & cuisines cards
 
-## tech stack
+## Tech stack
 
 Backend: Express js
-Google cloud service:
+Google Cloud Service:
 
 - GCS: Store img on cloud
 - Google build: Delpoy server to cloud
 - Google run: Delpoy server to cloud
-- Ai chat - Gemini: Generate recipes suggestion
+- Ai chat - Gemini API: Generate recipes suggestion
 - Firestore: NoSQL database
+  ![backend_ architecture](./readme-img/backend_%20architecture.png)
+
+## Database - Firestore
+
+![DBdesign](./readme-img/db_column_design.png)
 
 ## Dependencies
 
