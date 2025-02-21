@@ -4,6 +4,8 @@
 
 ## Introduction
 
+ECOBITES is a web application developed during BrisHack 2025 within 24 hours.
+
 Users can use our web platform to solve the problem of not knowing how to handle ingredients or leftovers in their fridge.
 
 Through our platform, they can take a photo of the ingredients in their fridge and receive recipe suggestions powered by AI. After selecting a favorite recipe and cooking the dish, they can upload a post with a photo of their creation to earn reward ingredient cards.
