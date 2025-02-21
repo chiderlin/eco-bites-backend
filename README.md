@@ -12,8 +12,6 @@ By collecting enough ingredient cards, users can create and collect adorable rec
 
 ## [Frontend Repo](https://github.com/vivi2393142/ecoBites-web)
 
-![demo-gif](./readme-img/eco-project-demo.gif)
-
 ## Backend Info
 
 ## Tech stack
