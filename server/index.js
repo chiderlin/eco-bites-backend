@@ -12,26 +12,26 @@ const allowerOrigins = [
   'http://localhost:3000',
 ];
 
-app.use(
-  cors({
-    origin: '*', // ✅ Allow all origins
-    methods: 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
-    allowedHeaders: ['Content-Type', 'Authorization'],
-  })
-);
 // app.use(
 //   cors({
-//     origin: function (origin, cb) {
-//       if (!origin || allowerOrigins.includes(origin)) {
-//         cb(null, true); // allow request
-//       } else {
-//         cb(new Error('Not allowed by CORS')); // block
-//       }
-//     },
+//     origin: '*',
 //     methods: 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
-//     allowedHeaders: 'Content-Type, Authorization',
+//     allowedHeaders: ['Content-Type', 'Authorization'],
 //   })
 // );
+app.use(
+  cors({
+    origin: function (origin, cb) {
+      if (!origin || allowerOrigins.includes(origin)) {
+        cb(null, true); // allow request
+      } else {
+        cb(new Error('Not allowed by CORS')); // block
+      }
+    },
+    methods: 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
+    allowedHeaders: 'Content-Type, Authorization',
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use('/api', router);

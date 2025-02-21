@@ -4,11 +4,11 @@ substitutions:
 steps:
   # Build the image
   - name: 'gcr.io/cloud-builders/docker'
-    args:
-      [
+    args: [
         'build',
         '-t',
-        'europe-west2-docker.pkg.dev/$PROJECT_ID/eco-bites/eco-bites-image/${_SERVICE_NAME}:$COMMIT_SHA',
+        'europe-west2-docker.pkg.dev/$PROJECT_ID/eco-bites/eco-bites-image/${_SERVICE_NAME}:$COMMIT_SHA', #<region>-docker.pkg.dev/<project-id>/<repository>/<image-name>:<tag>
+
         '.',
       ]
   # Push the image to Artifact Registry
@@ -29,7 +29,7 @@ steps:
       - 'europe-west2-docker.pkg.dev/$PROJECT_ID/eco-bites/eco-bites-image/${_SERVICE_NAME}:$COMMIT_SHA'
       - '--region'
       - 'europe-west2'
-      - '--set-env-vars PORT=8080'
+      - '--set-env-vars PORT=8080' # set inide the container, the env variable PORT is 8080.
       - '--allow-unauthenticated'
 images:
   - 'europe-west2-docker.pkg.dev/$PROJECT_ID/eco-bites/eco-bites-image/${_SERVICE_NAME}:$COMMIT_SHA'
