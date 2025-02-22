@@ -12,6 +12,8 @@ Through our platform, they can take a photo of the ingredients in their fridge a
 
 By collecting enough ingredient cards, users can create and collect adorable recipe cards.
 
+![demo](./readme-img/eco-project-demo.gif)
+
 ## [Frontend Repo](https://github.com/vivi2393142/ecoBites-web)
 
 ## Backend Info
